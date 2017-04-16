@@ -1,5 +1,5 @@
 {
-    "name": "gigablah/silex-oauth",
+    "name": "ivbre/silex-oauth",
     "description": "Silex OAuth Authentication Provider",
     "keywords": ["silex", "oauth"],
     "homepage": "https://github.com/gigablah/silex-oauth",
