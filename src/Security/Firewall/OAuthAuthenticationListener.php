@@ -132,6 +132,11 @@ class OAuthAuthenticationListener extends AbstractAuthenticationListener
                     'oauth_token' => $token->getRequestToken()
                 );
             }
+
+            if (method_exists($oauthService, 'setAccessType')) {
+                $oauthService->setAccessType('offline');
+            }
+                
             $authorizationUri = $oauthService->getAuthorizationUri($authorizationParameters);
 
             return $this->httpUtils->createRedirectResponse($request, $authorizationUri->getAbsoluteUri());
